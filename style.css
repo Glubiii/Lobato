@@ -1,111 +1,270 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-
 }
 
-body{
-    font-size: 100%;
-    background: rgb(186,237,147);
-    background: linear-gradient(90deg, rgba(186,237,147,1) 60%, rgba(255,172,226,1) 100%);
+/* Layout do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #4e342e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Cabeçalho */
 .header {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-    padding: 24px;
+    padding: 20px;
+    width: 100%;
+    background-color: #4e342e;
 }
 
-.header-images {
-    height: 72px;
+.header-logo {
+    height: 60px;
 }
 
 .nav {
     display: flex;
-    gap: 32px;
-}
-
-.nav-item:hover {
-    color: #00d5d5;
+    gap: 15px;
 }
 
 .nav-item {
-    font-family: 'Righteous', cursive;
-    color: #004747;
+    color: #c8a15a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.main {
-    border-top: 0.4px solid #004747;
-    margin-bottom: 48px;
-
-    
+.nav-item:hover {
+    color: #f7f7f7;
 }
 
-.main-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+/* Hero Section */
+.hero {
+    background-color: #e8e0d9;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 4px solid #c8a15a;
 }
 
-.main-section-div {
+.hero h1 {
+    color: #4e342e;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #4e342e;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #c8a15a;
+    color: #4e342e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b08f50;
+}
+
+/* Seção Sobre */
+.about, .impact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.about h2, .impact h2 {
+    color: #4e342e;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.about p, .impact p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Serviços */
+.services {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    
-
-}
-
-.main-title {
-    font-family: 'Righteous', cursive;
-    font-weight: 400;
-    font-size: 64px;
-    color: #004747;
-
-}
-
-.main-subtitle {
-    font-family: 'Righteous', cursive;
-    font-weight: 400;
-    font-size: 24px;
-    color: #004747;
-    
-
-}
-
-.main-section2 {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 24px;
-    margin-top: 48px;
+    background-color: #e8e0d9;
+    padding: 40px 20px;
+    gap: 20px;
 }
 
-.main-minititle {
-    border-top: 0.4px solid #004747;
-    padding-top: 48px;
-    font-family: 'Righteous', cursive;
-    font-weight: 400;
-    font-size: 16px;
-    color: #004747;
+.service-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #c8a15a;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.service-card h3 {
+    color: #4e342e;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
 .footer {
-    padding: 32px;
-    border-top: 0.4px solid #004747;
-
+    background-color: #4e342e;
+    color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
 }
 
+.footer p {
+    color: #c8a15a;
+}
 
-.footer-image {
-    height: 42px;
+/* Media Query para Responsividade */
+@media (min-width: 768px) {
+    .services {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #4e342e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #4e342e;
+}
+
+.header-logo {
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: #c8a15a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #f7f7f7;
+}
+
+/* Layout das Formulários e Seções */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border: 1px solid #c8a15a;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.container h1 {
+    font-size: 2em;
+    color: #4e342e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container label {
     display: block;
-    margin: 0 auto;
+    font-weight: bold;
+    color: #4e342e;
+    margin-top: 15px;
+}
 
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="tel"],
+.container input[type="number"],
+.container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c8a15a;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 1em;
+}
+
+.container textarea {
+    resize: vertical;
+}
+
+.container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    background-color: #c8a15a;
+    color: #4e342e;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #b08f50;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #4e342e;
+    color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    color: #c8a15a;
 }
